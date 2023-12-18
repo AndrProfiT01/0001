@@ -1,0 +1,11 @@
+const config = {
+    ...WeSdk.MAINNET_CONFIG,
+    nodeAddress: 'https://hoover.welocal.dev/node-0',
+    crypto: 'waves',
+    networkByte: 'V'.charCodeAt(0)
+}
+
+const Waves = WeSdk.create({
+    initialConfiguration: config,
+    fetchInstance: window.fetch // Browser feature. For Node.js use node-fetch
+});
